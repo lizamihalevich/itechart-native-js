@@ -8,5 +8,7 @@
         "build": "parcel build index.html"
     },
     "author": "",
-    "license": "ISC"
+    "license": "ISC",
+    "dependencies": {},
+    "devDependencies": {}
 }

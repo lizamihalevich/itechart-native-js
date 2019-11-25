@@ -7,7 +7,7 @@ console.log(myLib.take([1, 2, 4], 1));
 //SKIP
 console.log(myLib.skip([1, 2, 3, 4, 5], 4));
 // //REDUCE
-console.log(myLib.reduce([1, 2], (a, b) => a + b, 0));
+console.log(myLib.reduce([1, 2, 3], (a, b) => a + b, 0));
 // //FILTER
 console.log(myLib.filter(['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'], word => word.length > 6));
 // //FOREACH

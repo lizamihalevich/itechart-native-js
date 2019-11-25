@@ -1,20 +1,15 @@
-var reduce = function(array, callback, initialValue) {
-    if (!Array.isArray(array)) {
+var reduce = function(arr, callback, initialVal) {
+    if (!Array.isArray(arr)) {
         throw new Error("You should pass an array")
     }
-    const rec = function(arr, acc) {
-        if (!arr.length) {
-            return acc;
-        }
-        const curr = arr[0];
-        const nextArr = arr.slice(1);
-        const nextAcc = callback(acc, curr);
-        return rec(nextArr, nextAcc);
+    var accumulator = (initialVal === undefined) ? undefined : initialVal;
+    for (var i = 0; i < arr.length; i += 1) {
+        if (accumulator !== undefined)
+            accumulator = callback.call(undefined, accumulator, arr[i], i, arr);
+        else
+            accumulator = arr[i];
     }
-    if (initialValue) {
-        return rec(array, initialValue);
-    }
-    return rec(array.slice(1), array[0]);
-}
+    return accumulator;
+};
 
 export default reduce;
