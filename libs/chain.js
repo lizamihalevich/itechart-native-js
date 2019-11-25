@@ -15,16 +15,30 @@ var chain = function(arr) {
 
     this.filter = function(callback) {
         this.array = filter(this.array, callback);
-        return this.array;
+        return this;
     }
 
     this.take = function(n) {
         this.array = take(this.array, n);
-        return this.array;
+        return this;
     }
 
     this.skip = function(n) {
         this.array = skip(this.array, n);
+        return this;
+    }
+
+    this.map = function(callback) {
+        this.array = map(this.array, callback);
+        return this;
+    }
+
+    this.reduce = function(callback, initialValue) {
+        this.array = reduce(this.array, callback, initialValue);
+        return this;
+    }
+
+    this.value = function() {
         return this.array;
     }
     return this;

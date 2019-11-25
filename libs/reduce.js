@@ -2,7 +2,7 @@ var reduce = function(array, callback, initialValue) {
     if (!Array.isArray(array)) {
         throw new Error("You should pass an array")
     }
-    const rec = (arr, acc) => {
+    const rec = function(arr, acc) {
         if (!arr.length) {
             return acc;
         }
