@@ -1,4 +1,4 @@
-var take = function(arr, n) {
+const take = (arr, n) => {
     if (!Array.isArray(arr)) {
         throw new Error("You should pass an array")
     }

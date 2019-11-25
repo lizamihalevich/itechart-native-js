@@ -1,4 +1,4 @@
-var filter = function(arr, callback) {
+const filter = (arr, callback) => {
     if (!Array.isArray(arr)) {
         throw new Error("You should pass an array")
     }

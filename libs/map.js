@@ -1,4 +1,4 @@
-var map = function(arr, callback) {
+const map = (arr, callback) => {
     if (!Array.isArray(arr)) {
         throw new Error("You should pass an array")
     }
