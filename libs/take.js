@@ -3,6 +3,10 @@ const take = (arr, n) => {
     throw new Error('You should pass an array');
   }
 
+  if (n < 0) {
+    throw new Error('You should pass positive number');
+  }
+
   return arr.slice(0, n);
 };
 
