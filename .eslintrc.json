@@ -1,8 +1,17 @@
 {
-  "extends": ["prettier"],
+  "extends": ["airbnb", "prettier"],
   "plugins": ["prettier"],
   "rules": {
-    "prettier/prettier": ["error"]
+    "prettier/prettier": ["error"],
+    "no-restricted-syntax": [
+      "error",
+      "ForInStatement",
+      "LabeledStatement",
+      "WithStatement"
+    ]
   },
-  "parser": "babel-eslint"
+  "parser": "babel-eslint",
+  "env": {
+    "jest": true
+  }
 }

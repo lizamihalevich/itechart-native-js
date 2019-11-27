@@ -14,7 +14,7 @@ test('forEach is working', () => {
 });
 
 test('forEach is working', () => {
-  const mockCallback = jest.fn(x => Math.pow(x, 2));
+  const mockCallback = jest.fn(x => x ** 2);
   myLib.forEach([1, 2, 3], mockCallback);
 
   expect(mockCallback.mock.results[0].value).toBe(1);

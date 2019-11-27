@@ -3,9 +3,9 @@ const filter = (arr, callback) => {
     throw new Error('You should pass an array');
   }
 
-  let newArr = [];
+  const newArr = [];
 
-  for (let [index, value] of Object.entries(arr)) {
+  for (const [index, value] of Object.entries(arr)) {
     if (callback(value, index, arr)) {
       newArr.push(value);
     }

@@ -1,24 +1,17 @@
 import myLib from './myLib';
 
-//MAP
-console.log(myLib.map([3, 5, 6], a => a * 2));
-//TAKE
+// MAP
+console.log(myLib.map([3, 5, 6], a => a * 3));
+// TAKE
 console.log(myLib.take([1, 2, 4], 1));
-//SKIP
+// SKIP
 console.log(myLib.skip([1, 2, 3, 4, 5], 4));
 // //REDUCE
 console.log(myLib.reduce([1, 2, 3, 4], (a, b) => a + b, 0));
 // //FILTER
 console.log(
   myLib.filter(
-    [
-      'spray',
-      'limit',
-      'elite',
-      'exuberant',
-      'destruction',
-      'present',
-    ],
+    ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'],
     word => word.length > 6,
   ),
 );

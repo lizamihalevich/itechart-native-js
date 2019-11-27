@@ -5,11 +5,7 @@ test('doubling an array', () => {
 });
 
 test('squaring an array', () => {
-  expect(myLib.map([1, 2, 3], a => Math.pow(a, 2))).toEqual([
-    1,
-    4,
-    9,
-  ]);
+  expect(myLib.map([1, 2, 3], a => a ** 2)).toEqual([1, 4, 9]);
 });
 
 test('mapping an empty array', () => {

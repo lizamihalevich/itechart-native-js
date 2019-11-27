@@ -5,7 +5,7 @@ import reduce from './reduce';
 import skip from './skip';
 import take from './take';
 
-const chain = function(arr) {
+const chain = function chain(arr) {
   if (!Array.isArray(arr)) {
     throw new Error('You should pass an array');
   } else {

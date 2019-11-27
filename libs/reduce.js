@@ -5,7 +5,7 @@ const reduce = (arr, callback, initialVal) => {
 
   let accumulator = initialVal;
 
-  for (let [index, value] of Object.entries(arr)) {
+  for (const [index, value] of Object.entries(arr)) {
     if (!accumulator) {
       accumulator = value;
     } else {

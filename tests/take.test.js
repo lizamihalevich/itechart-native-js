@@ -20,12 +20,8 @@ test('take more elements than array length', () => {
   expect(myLib.take([1, 2, 3, 4, 5], 10)).toEqual([1, 2, 3, 4, 5]);
 });
 
-test('take more elements than array length', () => {
+test('take 6 elements from array', () => {
   expect(myLib.take([1, 2, 3, 4, 5], 6)).toEqual([1, 2, 3, 4, 5]);
-});
-
-test('take some elements from empty array', () => {
-  expect(myLib.take([], 1)).toEqual([]);
 });
 
 test('take some elements from empty array', () => {

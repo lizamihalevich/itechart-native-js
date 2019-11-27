@@ -3,10 +3,10 @@ const map = (arr, callback) => {
     throw new Error('You should pass an array');
   }
 
-  let newArr = [];
+  const newArr = [];
 
-  for (let value of arr) {
-    newArr.push(callback(value));
+  for (const [index, value] of Object.entries(arr)) {
+    newArr.push(callback(value, index, arr));
   }
 
   return newArr;
