@@ -20,10 +20,14 @@ test('take more elements than array length', () => {
   expect(myLib.take([1, 2, 3, 4, 5], 10)).toEqual([1, 2, 3, 4, 5]);
 });
 
-test('take negative value of elements', () => {
-  expect(myLib.take([1, 2, 3, 4, 5], -1)).toThrow();
+test('take more elements than array length', () => {
+  expect(myLib.take([1, 2, 3, 4, 5], 6)).toEqual([1, 2, 3, 4, 5]);
 });
 
-test('pass not an array', () => {
-  expect(myLib.take(2, 1)).toThrow();
+test('take some elements from empty array', () => {
+  expect(myLib.take([], 1)).toEqual([]);
+});
+
+test('take some elements from empty array', () => {
+  expect(myLib.take([], 10)).toEqual([]);
 });

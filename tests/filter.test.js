@@ -15,3 +15,13 @@ test('filtering words bigger than 6 symbols', () => {
     ),
   ).toEqual(['exuberant', 'destruction', 'present']);
 });
+
+test('filtering an array of numbers', () => {
+  expect(
+    myLib.filter([1, 2, 3, 4, 5], num => num % 2 === 0),
+  ).toEqual([2, 4]);
+});
+
+test('filtering an empty array of numbers', () => {
+  expect(myLib.filter([], num => num % 2 === 0)).toEqual([]);
+});
