@@ -31,3 +31,15 @@ test('skipping some elements in empty array', () => {
 test('skipping zero elements in empty array', () => {
   expect(myLib.skip([], 0)).toEqual([]);
 });
+
+test('pass not an array throws error', () => {
+  expect(() => {
+    myLib.skip(2, 1);
+  }).toThrow();
+});
+
+test('pass negative value throws error', () => {
+  expect(() => {
+    myLib.skip([2], -1);
+  }).toThrow();
+});

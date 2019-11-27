@@ -6,7 +6,11 @@ import skip from './skip';
 import take from './take';
 
 const chain = function(arr) {
-  this.array = arr;
+  if (!Array.isArray(arr)) {
+    throw new Error('You should pass an array');
+  } else {
+    this.array = arr;
+  }
 
   this.forEach = callback => {
     forEach(this.array, callback);

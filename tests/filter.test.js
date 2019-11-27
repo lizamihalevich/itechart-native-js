@@ -25,3 +25,9 @@ test('filtering an array of numbers', () => {
 test('filtering an empty array of numbers', () => {
   expect(myLib.filter([], num => num % 2 === 0)).toEqual([]);
 });
+
+test('pass not an array throws error', () => {
+  expect(() => {
+    myLib.filter(1, a => a > 2);
+  }).toThrow();
+});

@@ -31,3 +31,15 @@ test('take some elements from empty array', () => {
 test('take some elements from empty array', () => {
   expect(myLib.take([], 10)).toEqual([]);
 });
+
+test('pass negative value throws error', () => {
+  expect(() => {
+    myLib.take([1, 2], -1);
+  }).toThrow();
+});
+
+test('pass not an array throws error', () => {
+  expect(() => {
+    myLib.take(2, 1);
+  }).toThrow();
+});

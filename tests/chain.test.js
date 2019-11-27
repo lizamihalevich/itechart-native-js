@@ -50,3 +50,13 @@ test('chaining empty array', () => {
       .value(),
   ).toEqual(0);
 });
+
+test('pass not an array throws error', () => {
+  expect(() => {
+    myLib
+      .chain(1)
+      .take(3)
+      .skip(1)
+      .value();
+  }).toThrow();
+});

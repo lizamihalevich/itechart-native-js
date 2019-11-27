@@ -15,3 +15,9 @@ test('reducing an array into sum with nonzero initial value', () => {
 test('reducing an empty array into sum', () => {
   expect(myLib.reduce([], (a, b) => a + b, 0)).toBe(0);
 });
+
+test('pass not an array throws error', () => {
+  expect(() => {
+    myLib.reduce(1, (a, b) => a + b, 0);
+  }).toThrow();
+});

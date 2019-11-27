@@ -15,3 +15,9 @@ test('squaring an array', () => {
 test('mapping an empty array', () => {
   expect(myLib.map([], a => Math.sqrt(a))).toEqual([]);
 });
+
+test('pass not an array throws error', () => {
+  expect(() => {
+    myLib.map(1, a => a * 2);
+  }).toThrow();
+});

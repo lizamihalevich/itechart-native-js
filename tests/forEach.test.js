@@ -12,3 +12,18 @@ test('forEach is working', () => {
   expect(mockCallback.mock.results[0].value).toBe(1);
   expect(mockCallback.mock.results[1].value).toBe(2);
 });
+
+test('forEach is working', () => {
+  const mockCallback = jest.fn(x => Math.pow(x, 2));
+  myLib.forEach([1, 2, 3], mockCallback);
+
+  expect(mockCallback.mock.results[0].value).toBe(1);
+  expect(mockCallback.mock.results[1].value).toBe(4);
+  expect(mockCallback.mock.results[2].value).toBe(9);
+});
+
+test('pass not an array throws error', () => {
+  expect(() => {
+    myLib.forEach(2, x => x + 1);
+  }).toThrow('You should pass an array');
+});
