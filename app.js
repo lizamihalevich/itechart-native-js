@@ -26,3 +26,8 @@ console.log(
     .forEach(a => console.log(a))
     .value(),
 );
+
+console.log(myLib.memoizedSum(2, 4));
+console.log(myLib.memoizedSum(3, 4));
+console.log(myLib.memoizedSum(2, 4));
+console.log(myLib.memoizedSum(3, 4));
