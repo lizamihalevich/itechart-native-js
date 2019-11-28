@@ -6,5 +6,18 @@ import skip from './libs/skip';
 import take from './libs/take';
 import chain from './libs/chain';
 import memoizedSum from './libs/memoizedSum';
+import curriedSum from './libs/curriedSum';
+import curry from './libs/curry';
 
-export default { filter, forEach, map, reduce, skip, take, chain, memoizedSum };
+export default {
+  filter,
+  forEach,
+  map,
+  reduce,
+  skip,
+  take,
+  chain,
+  memoizedSum,
+  curriedSum,
+  curry,
+};
