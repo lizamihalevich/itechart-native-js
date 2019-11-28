@@ -32,4 +32,4 @@ console.log(myLib.memoizedSum(3, 4));
 console.log(myLib.memoizedSum(2, 4));
 console.log(myLib.memoizedSum(3, 4));
 console.log(myLib.memoizedSum(4, 3));
-console.log(myLib.curriedSum(2)(1)(4));
+console.log(myLib.curriedSum(1)(5)(1));
