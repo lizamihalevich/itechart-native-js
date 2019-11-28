@@ -1,7 +1,7 @@
-import myLib from '../myLib';
+import myLib from '../../myLib';
 
-describe('chaining is working', () => {
-  test('with take and skip', () => {
+describe('libs/chain', () => {
+  test('chaining take and skip', () => {
     expect(
       myLib
         .chain([1, 2, 3, 4])
@@ -11,7 +11,7 @@ describe('chaining is working', () => {
     ).toEqual([2, 3]);
   });
 
-  test('with map and reduce', () => {
+  test('chaining map and reduce', () => {
     expect(
       myLib
         .chain([1, 2, 3, 4])
@@ -31,7 +31,7 @@ describe('chaining is working', () => {
     ).toEqual(4);
   });
 
-  test('with filter, skip and map', () => {
+  test('chaining filter, skip and map', () => {
     expect(
       myLib
         .chain([1, 2, 3, 4])
@@ -42,7 +42,7 @@ describe('chaining is working', () => {
     ).toEqual([8]);
   });
 
-  test('with empty array', () => {
+  test('chaining empty array', () => {
     expect(
       myLib
         .chain([])
