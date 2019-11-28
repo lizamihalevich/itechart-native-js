@@ -3,8 +3,9 @@ const curry = function(func) {
     if (args.length >= func.length) {
       return func(...args);
     }
+
     return function(...args2) {
-      return curried(...args.concat(args2));
+      return curried(...args, ...args2);
     };
   };
 };
