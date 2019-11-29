@@ -1,14 +1,17 @@
-var filter = function(arr, callback) {
-    if (!Array.isArray(arr)) {
-        throw new Error("You should pass an array")
+const filter = (arr, callback) => {
+  if (!Array.isArray(arr)) {
+    throw new Error('You should pass an array');
+  }
+
+  const newArr = [];
+
+  for (const [index, value] of Object.entries(arr)) {
+    if (callback(value, index, arr)) {
+      newArr.push(value);
     }
-    let newArr = [];
-    for (let i = 0; i < arr.length; i += 1) {
-        if (callback(arr[i], i, arr)) {
-            newArr.push(arr[i]);
-        }
-    }
-    return newArr;
+  }
+
+  return newArr;
 };
 
 export default filter;
